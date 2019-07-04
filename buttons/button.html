@@ -61,13 +61,13 @@
   <center><button id="coloranimation" class="coloranimation" onclick="var element=document.getElementById('coloranimation'); element.classList.remove('coloranimation'); void element.offsetWidth; element.classList.add('coloranimation');">text</button></center>
   <p>css:</p>
   <pre>
+.coloranimation {
+  animation-name: colors;
+  animation-duration: 4s;
+}
 @keyframes colors {
   from {background-color: red;}
   to {background-color: yellow;}
-}
-pre {
-  text-align: left;
-  padding-left: 20%;
 }
   </pre>
   <p>html:</p>
@@ -95,5 +95,9 @@ pre {
   </pre>
   <p>html:</p>
   <pre>&lt;button id="hovercolor"&gt;text&lt;\button&gt;</pre>
+  <hr>
+  <p>Or even images!</p> 
+  <center><button><img src='./text.PNG'></button></center>
+  <pre>&lt;button&gt;&lt;img src='./text.PNG'&gt;&lt;\button&gt;</pre>
 </body>
 </html>

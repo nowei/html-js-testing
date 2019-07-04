@@ -6,17 +6,17 @@
 <body>
 
 <script>
-var canvas = document.createElement("canvas");
-canvas.id = 'canvas';
-var ctx = canvas.getContext("2d");
-canvas.width = window.innerWidth - 15;
-canvas.height = window.innerHeight - 15;
-document.body.appendChild(canvas);
-cWidth=canvas.width;
-cHeight=canvas.height;
-ctx.beginPath();
-ctx.arc(100, 75, 50, 0, 2 * Math.PI);
-ctx.stroke();
+  var canvas = document.createElement("canvas");
+  canvas.id = 'canvas';
+  var ctx = canvas.getContext("2d");
+  canvas.width = window.innerWidth - 15;
+  canvas.height = window.innerHeight - 15;
+  document.body.appendChild(canvas);
+  cWidth=canvas.width;
+  cHeight=canvas.height;
+  ctx.beginPath();
+  ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+  ctx.stroke();
 </script> 
 
 </body>

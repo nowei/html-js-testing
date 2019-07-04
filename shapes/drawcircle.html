@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- load the d3.js library -->    
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+<html>
+<body>
+
+<script>
+  var canvas = document.createElement("canvas");
+  canvas.id = 'canvas';
+  var ctx = canvas.getContext("2d");
+  canvas.width = window.innerWidth - 15;
+  canvas.height = window.innerHeight - 15;
+  document.body.appendChild(canvas);
+  cWidth=canvas.width;
+  cHeight=canvas.height;
+  var initialX = 40;
+  var startX = initialX;
+  var startY = 100;
+  function animate() {
+    if (startX < 560)
+    {
+      ctx.clearRect(startX - 11, startY - 10, 20, 20);
+      
+      ctx.fillStyle = 'black';
+      ctx.beginPath(); 
+      ctx.arc(startX, startY, 10, 0 * Math.PI, 2 * Math.PI); 
+      ctx.fill();
+      ctx.beginPath(); 
+      ctx.arc(initialX, startY, 30, 0 * Math.PI, 2 * Math.PI); 
+      ctx.fill();
+
+      ctx.fillStyle = 'green';
+      ctx.beginPath(); 
+      ctx.arc(startX, startY, 8, 0 * Math.PI, 2 * Math.PI); 
+      ctx.fill();
+
+      ctx.beginPath(); 
+      ctx.arc(initialX, startY, 28, 0 * Math.PI, 2 * Math.PI); 
+      ctx.fill();
+
+      startX++;
+    } else {
+      startX = initialX;
+      // setInterval(animate, 5);
+      // console.log(startX);
+    }
+  }
+  setInterval(animate, 10);
+  // animate();
+</script> 
+
+</body>
+</html>
