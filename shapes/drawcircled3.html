@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- load the d3.js library -->    
+<script src="./d3.js"></script>
+
+<html>
+<body>
+<div id="svgcontainer">
+<script>
+  var width = 600;
+  var height = 200;
+  var svg = d3.select("#svgcontainer")
+              .append("svg")
+              .attr("width", width)
+              .attr("height", height);
+  var initialX = 40;
+  var startX = initialX;
+  var startY = 100;
+  var message = svg.append("circle")
+                   .attr("cx", initialX)
+                   .attr("cy", startY)
+                   .attr("r", 10)
+                   .attr("fill", "green")
+                   .style("stroke", "black")
+                   .style("stroke-width", 2);
+  var node1 = svg.append("circle")
+                 .attr("cx", initialX)
+                 .attr("cy", startY)
+                 .attr("r", 30)
+                 .attr("fill", "green")
+                 .style("stroke", "black")
+                 .style("stroke-width", 3);
+  function animate() {
+    if (startX < 560)
+    {
+      message.attr("cx",startX);
+      startX++;
+    } else {
+      startX = initialX;
+      // setInterval(animate, 5);
+      // console.log(startX);
+    }
+  }
+  setInterval(animate, 10);
+  // animate();
+</script> 
+</div>
+</body>
+</html>
