@@ -1,6 +1,38 @@
 body {
-  background-color: grey;
-  font-family: "Times", Helvetica, sans-serif;
+  background-image: linear-gradient(rgb(0,0,0), rgb(50,50,50));
+  font-family: "Consolas", Helvetica, sans-serif;
   font-size: 2em;
   color: white;
+  text-align: center;
+}
+p {
+  width:1000px;
+  text-align: center;
+  display: inline-block;
+}
+a:link, a:visited, button {
+  background-image: linear-gradient(rgb(50,50,50), rgb(100,100,100));
+  border: none;
+  color: white;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  display: inline-block;
+  font-size: 1em;
+  font-family: "Consolas";
+  min-width:200px;
+}
+
+#buttons {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a:hover, a:active {
+  color:black;
+}
+
+br {
+  display: block;
+  content: " ";
+  margin: 15px 0;
 }

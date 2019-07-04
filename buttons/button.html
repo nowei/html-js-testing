@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+  <title>title page or something</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-image: linear-gradient(rgb(0,0,0), rgb(50,50,50));
+      font-family: "Times", Helvetica, sans-serif;
+      font-size: 1.5em;
+      /*text-align: center;*/
+      color: white;
+    }
+    p {
+      padding-left: 20%;
+      padding-right: 25%;
+    }
+    pre {
+      text-align: left;
+      padding-left: 20%;
+    }
+    .coloranimation {
+      animation-name: colors;
+      animation-duration: 4s;
+    }
+    @keyframes colors {
+      from {background-color: red;}
+      to {background-color: yellow;}
+    }
+    #hovercolor {
+      background-color:#000000;
+      color: white;
+      transition-duration: 0.4s;
+    }
+    #hovercolor:hover {
+      background-color:#FFFFFF;
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(255,255,255,1);
+      color:black;
+      transform: scale(2.0);
+    }
+  </style>
+</head>
+<body>
+  <p>Testing different buttons</p>
+  <hr>
+  <p>This is a button with text on it </p>
+  <center><button>text</button></center>
+  <p>and you get this by doing something like: </p>
+  <pre>&lt;button&gt;text&lt;\button&gt;</pre>
+  <hr>
+  <p>You can style the button so that it's larger</p>
+  <center><button style="width:10em; height:10em;">text</button></center>
+  <p>by doing something like this:</p>
+  <pre>&lt;button style="width:10em; height:10em;"&gt;text&lt;\button&gt;</pre>
+  <p>and you can change the color like this:</p>
+  <center><button style="background-color:yellow">text</button></center>
+  <pre>&lt;button style="background-color:yellow"&gt;text&lt;\button&gt;</pre>
+  <hr>
+  <p>And then you can add animations to the buttons using css and javascript and have it repeat on click but it looks pretty ugly</p>
+  <center><button id="coloranimation" class="coloranimation" onclick="var element=document.getElementById('coloranimation'); element.classList.remove('coloranimation'); void element.offsetWidth; element.classList.add('coloranimation');">text</button></center>
+  <p>css:</p>
+  <pre>
+@keyframes colors {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+pre {
+  text-align: left;
+  padding-left: 20%;
+}
+  </pre>
+  <p>html:</p>
+  <pre>&lt;button id="coloranimation" class="coloranimation" 
+   onclick="var element=document.getElementById('coloranimation'); 
+            element.classList.remove('coloranimation'); 
+            void element.offsetWidth; 
+            element.classList.add('coloranimation');"&gt;text&lt;\button&gt;</pre>
+  <hr>
+  <p>Then you can try adding some stuff like hover animations</p> 
+  <center><button id="hovercolor">text</button></center>
+  <p>css:</p>
+  <pre>
+#hovercolor {
+  background-color:#000000;
+  color: white;
+  transition-duration: 0.4s;
+}
+#hovercolor:hover {
+  background-color:#FFFFFF;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(255,255,255,1);
+  color:black;
+  transform: scale(2.0);
+}
+  </pre>
+  <p>html:</p>
+  <pre>&lt;button id="hovercolor"&gt;text&lt;\button&gt;</pre>
+</body>
+</html>
