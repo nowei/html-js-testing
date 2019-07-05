@@ -29,15 +29,26 @@
                  .attr("fill", "green")
                  .style("stroke", "black")
                  .style("stroke-width", 3);
+  var node2 = svg.append("circle")
+                 .attr("cx", 560)
+                 .attr("cy", startY)
+                 .attr("r", 30)
+                 .attr("fill", "green")
+                 .style("stroke", "black")
+                 .style("stroke-width", 3);
+  var speed = 1;
   function animate() {
     if (startX < 560)
     {
       message.attr("cx",startX);
-      startX++;
+      startX += speed;
     } else {
       startX = initialX;
-      // setInterval(animate, 5);
-      // console.log(startX);
+      if (Math.random() < 0.5) {
+        speed = 1;
+      } else {
+        speed = 2;
+      }
     }
   }
   setInterval(animate, 10);
