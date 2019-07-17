@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- load the circles.js library -->    
+<!-- <script src="./circles.js"></script> -->
+  <style>
+    .circle {
+      display: inline-block;
+      margin: 1em;
+    }
+
+    .circles-decimals {
+      font-size: .4em;
+    }
+  </style>
+
+<html>
+<body>
+<div id="canvas">
+  <div class="circle" id="circles-1"></div>
+  <div class="circle" id="circles-2"></div>
+  <div class="circle" id="circles-3"></div>
+  <div class="circle" id="circles-4"></div>
+  <div class="circle" id="circles-5"></div>
+</div>
+<script src="../js-modules/circles/circles.js"></script> 
+<script>
+    var colors = [
+      ['#D3B6C6', '#4B253A'], ['#FCE6A4', '#EFB917'], ['#BEE3F7', '#45AEEA'], ['#F8F9B6', '#D2D558'], ['#F4BCBF', '#D43A43']
+    ];
+
+    for (var i = 1; i <= 5; i++) {
+      var child = document.getElementById('circles-' + i),
+        percentage = 31.42 + (i * 9.84);
+        
+      Circles.create({
+        id:         child.id,
+        value: percentage,
+        radius:     60,
+        width:      10,
+        number:     percentage / 10,
+        colors:     colors[i - 1]
+      });
+    }
+  </script>
+
+</body>
+</html>
