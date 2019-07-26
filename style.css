@@ -2,8 +2,8 @@ html {
   background-image: linear-gradient(rgb(0,0,0), rgb(50,50,50));
   background-repeat: no-repeat;
   /*background-color: black;*/
-  background-size: auto;
-  height: 100%;
+  background-size: cover;
+  height: 100vmax;
 
 }
 body {
@@ -13,7 +13,7 @@ body {
   text-align: center;
 }
 p {
-  width:1000px;
+  /*width:1000px;*/
   text-align: center;
   display: inline-block;
 }
