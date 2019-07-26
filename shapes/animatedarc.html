@@ -80,7 +80,7 @@ path {
     //     .attrTween("d", arcTween);
     if (angle > 3 * Math.PI / 2) {
       angle = - Math.PI / 2;
-      console.log("RESETTINGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG");
+      // console.log("RESETTINGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG");
     }
     path1.attr("d", calculateArc([initialX, startY], angle));
     angle += 0.01;
@@ -91,7 +91,7 @@ path {
     // console.log(Math.cos(0));
     // console.log(startPos[0] + radius * Math.cos(endAngle));
     // path.setAttribute('d', ['M',
-    console.log(Math.abs(endAngle) < Math.PI / 2, " at ", endAngle * 180 / Math.PI);
+    // console.log(Math.abs(endAngle) < Math.PI / 2, " at ", endAngle * 180 / Math.PI);
     return ['M',
             0,
             0 - radius,

@@ -1,5 +1,12 @@
-body {
+html {
   background-image: linear-gradient(rgb(0,0,0), rgb(50,50,50));
+  background-repeat: no-repeat;
+  /*background-color: black;*/
+  background-size: auto;
+  height: 100%;
+
+}
+body {
   font-family: "Consolas", Helvetica, sans-serif;
   font-size: 2em;
   color: white;
