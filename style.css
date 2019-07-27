@@ -1,8 +1,6 @@
 html {
   background-image: linear-gradient(rgb(0,0,0), rgb(50,50,50));
   background-repeat: no-repeat;
-  background-position: center center fixed;
-  /*background-color: black;*/
   background-size: cover;
   /*height: 100vmax;*/
   display:flex;
@@ -13,6 +11,9 @@ html {
 }
 body {
   font-family: "Consolas", Helvetica, sans-serif;
+  width:100%;
+  padding-left: 10%;
+  padding-right: 10%;
   font-size: 2em;
   color: white;
   text-align: center;
