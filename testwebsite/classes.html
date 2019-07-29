@@ -9,16 +9,21 @@
     .classes {
       display:none;
     }
-    .classAll {
+    .quarter-container {
+      float:left;
+      /*margin: 0 auto;*/
+      display: flex;
+    }
+    .quarter-grid {
+      display:flex;
+      justify-content: flex-start;
+      flex-wrap:wrap;
+    }
+    .quarter-item {
       float:left;
       width:25%;
-      min-height:15%;
-      align-self: flex-start;
-    }
-    .row {
-      float:left;
-      margin: 0 auto;
-      display: block;
+      justify-content: flex-start;
+      /*display: flex;*/
     }
 
   </style>
@@ -35,8 +40,9 @@
     <a href="#">Link</a>
   </div>
   <hr>
-  <div class="row">
-    <div class="classAll">
+  <div class="quarter-container">
+    <div class="quarter-grid">
+    <div class="quarter-item">
       <button class="quarter">Autumn 2017</button>
       <div class="classes">
         <ul>
@@ -48,7 +54,7 @@
         </ul>
       </div>
     </div>
-    <div class="classAll">
+    <div class="quarter-item">
       <button class="quarter">Winter 2018</button>
       <div class="classes">
         <ul>
@@ -61,7 +67,7 @@
         </ul>
       </div>
     </div>
-    <div class="classAll">
+    <div class="quarter-item">
       <button class="quarter">Spring 2018</button>
       <div class="classes">
         <ul>
@@ -73,7 +79,7 @@
         </ul>
       </div>
     </div>
-    <div class="classAll">
+    <div class="quarter-item">
       <button class="quarter">Summer 2018</button>
       <div class="classes">
         <ul>
@@ -84,7 +90,7 @@
         </ul>
       </div>
     </div>
-    <div class="classAll">
+    <div class="quarter-item">
       <button class="quarter">Autumn 2018</button>
       <div class="classes">
         <ul>
@@ -97,7 +103,7 @@
         </ul>
       </div>
     </div>
-    <div class="classAll">
+    <div class="quarter-item">
       <button class="quarter">Winter 2019</button>
       <div class="classes">
         <ul>
@@ -109,7 +115,7 @@
         </ul>
       </div>
     </div>
-    <div class="classAll">
+    <div class="quarter-item">
       <button class="quarter">Spring 2019</button>
       <div class="classes">
         <ul>
@@ -120,6 +126,7 @@
           TA: CSE 180 - Intro to Data Science 
         </ul>
       </div>
+    </div>
     </div>
     </div>
   </div>
