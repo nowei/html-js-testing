@@ -1,0 +1,70 @@
+html {
+  background-image: linear-gradient(rgb(0,0,0), rgb(50,50,50));
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*height: 100vmax;*/
+  display:flex;
+
+  /*How to set minimum height*/
+  min-height: 100%;
+  height:auto;
+}
+body {
+  font-family: "Consolas", Helvetica, sans-serif;
+  width:100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: 1.25em;
+  color: white;
+  text-align: center;
+}
+p {
+  width:1000px;
+  text-align: center;
+  display: inline-block;
+}
+a:link, a:visited, button {
+  background-image: linear-gradient(rgb(50,50,50), rgb(100,100,100));
+  border: none;
+  color: white;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  display: inline-block;
+  font-size: 1em;
+  font-family: "Consolas";
+  min-width:200px;
+}
+
+#buttons {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a:hover, a:active {
+  color:black;
+}
+
+br {
+  display: block;
+  content: " ";
+  margin: 15px 0;
+}
+
+ul li {
+  text-align: left;
+}
+
+.normaltext {
+  border-bottom: 1px dotted grey;
+}
+.hover:hover .tooltiptext {
+  visibility: visible;
+}
+.hover .tooltiptext {
+  position: relative;
+  visibility: hidden;
+  background-color: grey;
+  text-align: center;
+  /*position: absolute;*/
+  border-bottom: none;
+}
