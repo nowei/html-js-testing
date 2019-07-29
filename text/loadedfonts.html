@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style.css">
+  <link href='http://fonts.googleapis.com/css?family=Judson:400,400italic,700' rel='stylesheet' type='text/css'>
+  <!-- <link href="https://fonts.googleapis.com/css?family=Bonbon&display=swap" rel="stylesheet"> -->
   <style>
     @import url('https://fonts.googleapis.com/css?family=Open+Sans');
     p.font {
@@ -22,16 +24,30 @@
       text-align: right;
       max-width:200px;
     }
+    @font-face {
+      font-family: 'Bonbon';
+      /* Note that you need to include the src to the location that contains the file */
+      /* You can also use local(file location) to access the file. */
+      src: url(https://fonts.gstatic.com/s/bonbon/v11/0FlVVPeVlFec4eePdzsB.woff2) format('woff2');
+
+    }
   </style>
 </head>
 <body>
   <p>hi.</p>
   <hr>
   <p>loaded fonts and stuff, I guess</p>
+  <h1>How to load it?</h1>
+  <p>Bad way: Put @import at top of &ltstyle&gt or css</p>
+  <pre>@import url('path to file name')</pre>
+  <p>Better way: Put it inside @font-face</p>
   <br/>
   <p class=font id="Open Sans"></p>
+  <p class=font id="Bonbon"></p>
+  <p class=font id="Judson"></p>
 
-
+  <p>TODO: Test the timing of fonts loaded locally and online using @font-face, @import, and &ltlink href ...&gt</p>
+  <p>Will do this when testing javascript timing</p>
 </body>
 <script>
   var elems = document.body.getElementsByClassName("font");
