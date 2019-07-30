@@ -6,6 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <style>
+     /* For the tooltips */
+    .normaltext {
+      border-bottom: 1px dotted grey;
+    }
+    .normaltext:hover .tooltiptext {
+      visibility: visible;
+      position: absolute;
+    }
+    .normaltext .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+    }
+
+    /* for the hide flexbox */
     button {
       width:100%;
     }
@@ -54,7 +73,7 @@
       <div class="classes">
         <ul>
           <li>CHEM 237 - Organic Chemistry I</li>
-          <li class="hover">CSE 311 - <span class="normaltext">Foundations of Computing I</span> <span class="tooltiptext">(Logic and stuff)</span></li>
+          <li class="tooltip">CSE 311 - <span class="normaltext">Foundations of Computing I<span class="tooltiptext">(Logic and stuff)</span></span> </li>
           <li>CSE 331 - Software Design and Implementation</li>
           <li>CSE 351 - Hardware/Software Interface</li>
           <li>CSE 495 - Vertically Integrated Project</li>
@@ -65,10 +84,10 @@
       <button class="quarter">Winter 2018</button>
       <div class="classes">
         <ul>
-          <li class="hover">CSE 312 - <span class="normaltext">Foundations of Computing II</span> <span class="tooltiptext">(Stats and stuff)</span></li>
+          <li class="tooltip">CSE 312 - <span class="normaltext">Foundations of Computing II</span> <span class="tooltiptext">(Stats and stuff)</span></li>
           <li>CSE 332 - Data Structures and Parallelism</li>
           <li>CSE 333 - Systems Programming</li>
-          <li class="hover">CSE 344 - <span class="normaltext">Intro to Data Management</span> <span class="tooltiptext">(Databases and stuff)</span></li>
+          <li class="tooltip">CSE 344 - <span class="normaltext">Intro to Data Management</span> <span class="tooltiptext">(Databases and stuff)</span></li>
           <li>CSE 369 - <span class="normaltext">Intro to Digital Design</span> <span class="tooltiptext">(FPGAs and Verilog)</span></li>
           <li>CSE 390 - Problem Solving with Programming</li>
         </ul>
@@ -78,8 +97,8 @@
       <button class="quarter">Spring 2018</button>
       <div class="classes">
         <ul>
-          <li class="hover">CSE 371 - <span class="normaltext">Design of Digital Circuits and Systems</span> <span class="tooltiptext">(Verilog II: Electric Boogaloo)</span></li>
-          <li class="hover">CSE 391 - <span class="normaltext">Software Tools</span> <span class="tooltiptext">(Linux and Stuff)</span></li>
+          <li class="tooltip">CSE 371 - <span class="normaltext">Design of Digital Circuits and Systems</span> <span class="tooltiptext">(Verilog II: Electric Boogaloo)</span></li>
+          <li class="tooltip">CSE 391 - <span class="normaltext">Software Tools</span> <span class="tooltiptext">(Linux and Stuff)</span></li>
           <li>CSE 451 - Intro to Operating Systems</li>
           <li>LING 200 - Intro to Linguistic Thought</li>
           TA: CSE 312 - Stats and stuff
@@ -102,7 +121,7 @@
       <div class="classes">
         <ul>
           <li>CSE 421 - Intro to Algorithms</li>
-          <li class="hover">CSE 431 - <span class="normaltext">Intro to Theory of Computation</span> <span class="tooltiptext">(Complexity)</span></li>
+          <li class="tooltip">CSE 431 - <span class="normaltext">Intro to Theory of Computation</span> <span class="tooltiptext">(Complexity)</span></li>
           <li>CSE 442 - Data Visualization</li>
           <li>CSE 455 - Computer Vision</li>
           <li>CSE 473 - Intro to Artificial Intelligence</li>
@@ -117,7 +136,7 @@
           <li>CSE 446 - Machine Learning</li>
           <li>CSE 447 - Natural Language Processing</li>
           <li>CSE 469 - Computer Architecture I</li>
-          <li class="hover">CSE 599 - <span class="normaltext">Theory of Optimization and Continuous Algorithms</span> <span class="tooltiptext"> (Convex Optimizations aka end me)</span></li>
+          <li class="tooltip">CSE 599 - <span class="normaltext">Theory of Optimization and Continuous Algorithms</span> <span class="tooltiptext"> (Convex Optimizations aka end me)</span></li>
           TA: CSE 312 - Stats and stuff
         </ul>
       </div>
@@ -136,6 +155,7 @@
     </div>
     </div>
     </div>
+
   </div>
 
   <script>

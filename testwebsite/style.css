@@ -60,18 +60,3 @@ br {
 ul li {
   text-align: left;
 }
-
-.normaltext {
-  border-bottom: 1px dotted grey;
-}
-.hover:hover .tooltiptext {
-  visibility: visible;
-}
-.hover .tooltiptext {
-  position: relative;
-  visibility: hidden;
-  background-color: grey;
-  text-align: center;
-  /*position: absolute;*/
-  border-bottom: none;
-}
