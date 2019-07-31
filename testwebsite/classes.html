@@ -8,25 +8,31 @@
   <style>
      /* For the tooltips */
     .normaltext {
-      border-bottom: 1px dotted grey;
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dotted white; /* If you want dots under the hoverable text */
     }
     .normaltext:hover .tooltiptext {
       visibility: visible;
-      position: absolute;
+      background-color:grey;
     }
     .normaltext .tooltiptext {
       visibility: hidden;
-      width: 120px;
+      /*width: 140px;*/
       background-color: black;
       color: #fff;
       text-align: center;
       border-radius: 6px;
-      padding: 5px 0;
+      padding: 0 0;
+      position: absolute;
+      z-index: 1;
+      overflow: visible;
     }
 
     /* for the hide flexbox */
     button {
       width:100%;
+      /*border:none;*/
     }
     .classes {
       /*display:none;*/
@@ -47,9 +53,26 @@
     }
     .quarter-item {
       /*float:left;*/
+      padding:5px 0;
+      /*border-color: white;*/
+      /*border-width: 5px;*/
+      border-color:blue;
+      border-width: 5px 5px;
       width:25%;
       justify-content: flex-start;
       /*display: flex;*/
+      /*border-radius:25px;*/
+      /*overflow: hidden;*/
+    }
+    .quarter {
+      padding: 3px 0;
+      height:50px;
+      border: 1px solid black;
+    }
+    .quarter:hover {
+      padding:0 0;
+      border: 3px solid white;
+
     }
 
   </style>
@@ -153,6 +176,12 @@
         </ul>
       </div>
     </div>
+    <div class="quarter-item">
+      <!-- Leave empty -->
+    </div>
+    <div class="quarter-item">
+      hi
+    </div>
     </div>
     </div>
 
@@ -169,9 +198,11 @@
         if (content.style.maxHeight) {
           content.style.maxHeight = null;
           // content.style.display = "none";
+          content.style.overflow = "hidden";
         } else {
           content.style.maxHeight = content.scrollHeight + "px";
           // content.style.display = "block";
+          content.style.overflow = "visible";
         }
       });
     }
