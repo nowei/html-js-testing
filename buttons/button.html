@@ -23,6 +23,7 @@
     .coloranimation {
       animation-name: colors;
       animation-duration: 4s;
+      animation-iteration-count: infinite;
     }
     @keyframes colors {
       from {background-color: red;}
@@ -38,6 +39,19 @@
       box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(255,255,255,1);
       color:black;
       transform: scale(2.0);
+    }
+
+    #hover2 {
+      padding: 3px 50px;
+      height:50px;
+      border: 3px solid yellow;
+    }
+    #hover2:hover {
+      padding: 0 50px;
+      border: 3px solid white;
+    }
+    #hover2:active {
+      border: 5px solid blue;
     }
   </style>
 </head>
@@ -64,6 +78,7 @@
 .coloranimation {
   animation-name: colors;
   animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 @keyframes colors {
   from {background-color: red;}
@@ -99,5 +114,26 @@
   <p>Or even images!</p> 
   <center><button><img src='./text.PNG'></button></center>
   <pre>&lt;button&gt;&lt;img src='./text.PNG'&gt;&lt;\button&gt;</pre>
+  <hr>
+  <p>You can even fake highlighting a button by styling it with padding </p>
+  <center><button id="hover2" onclick="console.log('hi' + document.getElementById('hover2').offsetHeight)">text</button></center>
+  <p>css:</p>
+  <pre>
+#hover2 {
+  padding: 3px 50px;
+  height:50px;
+  border: 3px solid yellow;
+}
+#hover2:hover {
+  padding: 0 50px;
+  border: 3px solid white;
+}
+#hover2:active {
+  border: 5px solid blue;
+}
+  </pre>
 </body>
+<footer style="height:500px">
+  
+</footer>
 </html>

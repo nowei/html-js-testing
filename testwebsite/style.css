@@ -59,4 +59,5 @@ br {
 
 ul li {
   text-align: left;
+  /*word-break: break-all;*/
 }
