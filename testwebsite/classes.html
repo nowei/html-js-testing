@@ -8,7 +8,10 @@
   <style>
      /* For the tooltips */
     body {
+    }
+    ul li {
       font-size: 1em;
+
     }
     p {
       all: unset;
@@ -100,18 +103,15 @@
       color: cyan;
     }
   </style>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script>
+    $(function() {
+      $("#header").load("./header.html");
+    });
+  </script>
 </head>
 <body>
-  <div class="header">
-    <h1>Andrew Wei</h1>
-    <p>This is a testing ground for a student website, I guess</p>
-  </div>
-  <div class="side-nav">
-    <a href="#">GitHub</a>
-    <a href="#">LinkedIn</a>
-    <a href="https://en.wikipedia.org/wiki/Pembroke_Welsh_Corgi#/media/File:Welchcorgipembroke.JPG">A picture of a corgi</a>
-    <a href="#">Link</a>
-  </div>
+  <div id="header"></div>
   <hr>
   <div class="quarter-container">
     <div class="quarter-grid">
@@ -168,7 +168,7 @@
     <div class="quarter-item">
       <!-- Leave empty -->
     </div>
-    
+
     <div class="quarter-item">
       <button class="quarter">Autumn 2017</button>
       <div class="classes">
