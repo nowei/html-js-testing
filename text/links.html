@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+  <title>Andrew Wei</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    a {
+      padding: 0.5em 0.5em;
+      transition: background-image 5s ease-in-out;
+    }
+    a:hover {
+      color: lightblue;
+    }
+
+    a:active {
+      color:cyan;
+    }
+    a#hovergrad:link {
+      background-image: linear-gradient(rgb(50,50,50), rgb(100,100,100));
+    }
+    a#hovergrad:hover {
+      background-image: linear-gradient(rgb(150,150,150), rgb(100,100,100));
+    }
+    a#hoverimage:link {
+      background-image: url("https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    }
+    a#hoverimage:hover {
+      background-image: url("https://apod.nasa.gov/apod/image/1908/g292chandra.jpg");
+    }
+    a#hovergrad2 {
+      background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+      box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+      background-size: 300% 100%;
+      transition: all .4s ease-in-out;
+    }
+    a#hovergrad2:hover {
+      background-position: 100% 0;
+    }
+  </style>
+</head>
+<body>
+<p>This is a normal button right now</p>
+<br />
+<a href="">Text</a>
+<br />
+<p>We try to change the background that is a gradient</p><br />
+<a id=hovergrad href="">Text</a><br />
+<p>Now lets try it with url images</p><br />
+<a id=hoverimage href="">Text</a><br />
+<p>Now we try to get buttons to transition colors, <a href="https://codepen.io/JavaScriptJunkie/pen/pPRooV" style="background:unset; display: unset; width: unset; padding:unset">source</a></p><br />
+<a id=hovergrad2 href="">Text</a><br />
+</body>
+</html>
