@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+  <title>Link button testing</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    a {
+      padding: 0.5em 0.5em;
+      transition: background-image 5s ease-in-out;
+    }
+    a:hover {
+      color: lightblue;
+    }
+
+    a:active {
+      color:cyan;
+    }
+    a#hovergrad:link {
+      background-image: linear-gradient(rgb(50,50,50), rgb(100,100,100));
+      z-index: 1;
+    }
+    a#hovergrad::before {
+      position: absolute;
+      content: "";
+      width:50%;
+      /*height:100%;*/
+      top: 0;
+      right: 0;
+      bottom: 0;
+      /*left: 0;*/
+      background-image: linear-gradient(rgb(150,150,150), rgb(100,100,100));
+      transition: opacity 0.5s linear;
+      opacity:0;
+      z-index:-1  ;
+    }
+    a#hovergrad:hover::before {
+      opacity:1;
+    }
+  </style>
+</head>
+<body>
+<p>Hover over this and stare at the top right portion of the button </p><br />
+<a id=hovergrad href="">Text</a><br />
+</body>
+</html>
