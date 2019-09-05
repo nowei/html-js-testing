@@ -19,7 +19,7 @@ path {
               .append("svg")
               .attr("width", width)
               .attr("height", height);
-  var initialX = 40;
+  var initialX = 40 + 30;
   var startX = initialX;
   var startY = 100;
   var message = svg.append("circle")
@@ -52,16 +52,25 @@ path {
                  .attr("transform", "translate("+initialX+","+startY+")");
   var node2 = svg.append("circle")
                  .attr("cx", 560)
-                 .attr("cy", startY)
+                 .attr("cy", startY + 80)
                  .attr("r", 30)
                  .attr("fill", "green")
                  .style("stroke", "black")
                  .style("stroke-width", 3);
+  var initialY = startY;
   var endX = 560;
   var hypotenuse = (endX - startX) / 2 / Math.cos(Math.PI/3);
+  var midpoint = [(parseInt(node1.attr('cx')) + parseInt(node2.attr('cx'))) / 2, (parseInt(node1.attr('cy')) + parseInt(node2.attr('cy'))) / 2];
+  console.log(node1.attr('cx'));
+  var hypotenuse = Math.pow(Math.pow(midpoint[0] - node1.attr('cx'), 2) + Math.pow(midpoint[1] - node1.attr('cy'), 2), 0.5) / Math.cos(Math.PI/3);
+  console.log(midpoint, hypotenuse);
+  var v1 = [midpoint[0] - node1.attr('cx'), midpoint[1] - node1.attr('cy')];
+  var v1_norm = Math.pow(Math.pow(v1[0], 2) + Math.pow(v1[1], 2), 0.5);
+  var slope2 = [(node1.attr('cy') - midpoint[1])/v1_norm, (midpoint[0] - node1.attr('cx'))/v1_norm];
+
   var focal = svg.append("circle")
-                 .attr("cx", (endX + startX) / 2)
-                 .attr("cy", (endX + startX) / 2 * Math.tan(Math.PI/3))
+                 .attr("cx", midpoint[0] + slope2[0] * hypotenuse)
+                 .attr("cy", midpoint[1] + slope2[1] * hypotenuse)
                  .attr("r", 30)
                  .attr("fill", "green")
                  .style("stroke", "black")
@@ -80,6 +89,7 @@ path {
       // console.log(startX,startY);
     } else {
       startX = initialX;
+      startY = initialY;
       if (Math.random() < 0.5) {
         speed = 1;
       } else {
